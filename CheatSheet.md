@@ -78,3 +78,4 @@ class (Class name){
 (Class name ) (Object name ) = new ( Class name ) 
 
  
+*conditional statement se aage karna hai 
