@@ -363,8 +363,10 @@ sout(Arrays.deeptoString(arr));
 
 
 
-// ⁡⁣⁣⁢Linear Search Algorithm ⁡
+// ⁡⁣⁣⁢Algorithm ⁡
 
+
+⁡⁣⁢⁣𝗟𝗶𝗻𝗲𝗮𝗿 𝗦𝗲𝗮𝗿𝗰𝗵⁡
 
 1) first we have to take array input 
 2) get the key element from the user 
@@ -415,5 +417,36 @@ public class LS {
 
     }
 }
+
+
+
+
+
+// ⁡⁣⁣⁢EXTRA⁡ 
+
+
+⁡⁣⁢⁣Random Number Fill⁡
+
+java.util.Random
+random.nextInt(starting, ending)
+
+
+⁡⁣⁢⁣Sorting ⁡
+
+java.utils.Arrays
+Arrays.sort(array_name)
+
+
+⁡⁣⁢⁣Math.min & Math.max⁡
+
+Math.min(int1, int2) // Provide 2 int/double/long
+Math.max(int1, int2) // Provide 2 int/double/long
+
+can use it with arrays as well 
+
+
+Math.min(temp_varible, arr[i]) // 
+Math.max(temp_variable, arr[i]) // 
+
 
 

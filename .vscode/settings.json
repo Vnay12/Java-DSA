@@ -3,5 +3,8 @@
     "java.project.sourcePaths": [
         "src"
     ],
-    "workbench.tree.indent": 20
+    "workbench.tree.indent": 15,
+    "[java]": {
+        "editor.defaultFormatter": "Oracle.oracle-java"
+    }
 }
