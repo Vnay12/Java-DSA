@@ -1,7 +1,8 @@
 {
     "java.format.settings.url": "eclipse-formatter.xml",
     "java.project.sourcePaths": [
-        "src"
+        "src",
+        "JAVA"
     ],
     "workbench.tree.indent": 15,
     "[java]": {
