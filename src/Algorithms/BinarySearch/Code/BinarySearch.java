@@ -113,6 +113,7 @@ public class BinarySearch {
 
     }
 
+
     /*
      Approach: Builtin Binary Search ( same as ordinary Binary search )
      Time Complexity: O(Log N)
