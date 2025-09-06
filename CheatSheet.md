@@ -77,8 +77,7 @@ float x = sc.nextFloat();
 double x = sc.nextDouble();
 ````
 
-> [!NOTE] 
-> Scanner is inside the class util 
+> [!NOTE] Scanner is inside the class util 
 
 Printing 
 
