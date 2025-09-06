@@ -1,4 +1,4 @@
-⁡⁣⁣⁢// Java ⁡⁣⁣⁢Behind the scene⁡
+# **Java Behind the scene**
 
                    javoc
 Code (.java file ) -----> Bytecode -----> Exe Code
@@ -20,13 +20,12 @@ JIT (Just-In-Time compiler):
 - Boosts performance by running these sections directly on the CPU.
 
 
-[⁡⁢⁣⁢NOTE⁡: Every other will compile code's output to exe code for performance but its magic of java due to which it is platform independant
+NOTE: Every other will compile code's output to exe code for performance but its magic of java due to which it is platform independent
 Write Once Run anywhere ]
 
 
 
-
-⁡⁣⁣⁢// Java Syntax⁡
+// Java Syntax
 
 public class (file name) {
     public static void main(String[] args) {
@@ -37,9 +36,9 @@ public class (file name) {
 
 
 
-⁡⁣⁣⁢// Data Type⁡
+// Data Type
 
-Fixed Sized irrespective of compiler/pltform
+Fixed Sized irrespective of compiler/platform
 byte --> 1 bytes / 8 bits
 short --> 2 bytes / 16 bits
 int --> 4 bytes / 32 bits
@@ -48,17 +47,17 @@ long  --> 8 bytes / 64 bits
 float --> 4 bytes / 32 bits 
 double --> 8 bytes / 32 bits ( by default )
 
-char --> 2 bytes / 16 bit ( its a unsigned char and supports unicode unlike any other language )
+char --> 2 bytes / 16 bit ( its a unsigned char and supports Unicode unlike any other language )
 
-[⁡⁢⁣⁢Note⁡: Java does not support unsigned so its first block will be MSB ]
-
-
+Note: Java does not support unsigned so its first block will be MSB ]
 
 
 
 
 
-// ⁡⁣⁣⁢Java All Package import ⁡
+
+
+//Java All Package import 
 
 import java.io.*;  
 import java.util.*;   // Mainly used 
@@ -70,9 +69,9 @@ import java.util.*;   // Mainly used
 
 
 
-// ⁡⁣⁣⁢Taking input and Showing Output⁡
+// Taking input and Showing Output
 
-⁡⁣⁢⁣Scanning⁡ 
+Scanning
 
 Scanner sc = new Scanner(system.in)
 String name = sc.nextLine();
@@ -81,10 +80,10 @@ float x = sc.nextFloat();
 double x = sc.nextDouble();
 
 
-⁡⁢⁣⁢Note⁡: Scanner is inside the class util 
+Note: Scanner is inside the class util 
 
-⁡⁣⁢⁣Printing 
-⁡
+Printing 
+
 System.out.print(" ")
 System.out.println(" ")
 
@@ -93,11 +92,11 @@ System.out.println(" ")
 
 
 
-// ⁡⁣⁣⁢Variable⁡ 
+// Variable
 
-1) Instance Varibale : Vaiable that are declared in class outside any method 
+1) Instance Variable : Vaiable that are declared in class outside any method 
    
-2) Local Variable : Within the block ( Function ) or method  ⁡⁢⁣⁢Note⁡: Even Main is a function 
+2) Local Variable : Within the block ( Function ) or method  Note: Even Main is a function 
    
 3) Static Variable : Also known as class variable. They are declared using static variable within the class outside the method or function vlock 
 
@@ -107,7 +106,7 @@ System.out.println(" ")
 
 
 
-⁡⁣⁣⁢// Class ⁡
+// Class 
 
 class (Class name){
 
@@ -124,7 +123,7 @@ class (Class name){
 }
 
 
-⁡⁣⁢⁣Define: ⁡
+Define: 
 
 (Class name ) (Object name ) = new ( Class name ) 
 
@@ -135,7 +134,7 @@ class (Class name){
 
 
 
- // ⁡⁣⁣⁢Access Modifiers in Java ( OOPS )⁡
+ // Access Modifiers in Java ( OOPS )
 
 
 
@@ -145,7 +144,7 @@ class (Class name){
 
 
 
-// ⁡⁣⁣⁢Functions & Methods ⁡
+// Functions & Methods 
 
 Functions are block of code and when it is written inside a class it is called Method
 
@@ -154,7 +153,7 @@ In java everything is call by value
 when we pass the value in the function, copy of the reference variable is passed which will create another varible which is pointing to same object and change in the formal variable wont cause change in the actual variable 
 
 
-⁡⁣⁢⁣For Primitive Datatype⁡
+For Primitive Datatype
 
 
 class test {
@@ -172,7 +171,7 @@ class test {
 
 
 
-⁡⁢⁣⁢Note⁡: For primitive Datatype value itself is copy and another object of value is created 
+Note: For primitive Datatype value itself is copy and another object of value is created 
 
        
 x -->      10
@@ -187,7 +186,7 @@ Another value is created and change in the formal parameter wont change the actu
 
 
 
-⁡⁣⁢⁣For Object Type⁡
+For Object Type
 
 class test {
 
@@ -203,7 +202,7 @@ class test {
 }
 
 
-⁡⁢⁣⁢Note⁡: For object reference, copy of refernce variable which has address of its object is made 
+Note: For object reference, copy of reference variable which has address of its object is made 
 
 x ----> 10       2      3     .....
         2000    2004    2008
@@ -213,15 +212,15 @@ passing value x to method means giving address to first pointer
 
 n----> 2000
 
-now n is also pointing to array object, here change in the formal paramter can change the actual parameter 
+now n is also pointing to array object, here change in the formal parameter can change the actual parameter 
 
 
 
 
 
-⁡⁣⁢⁣Variable Arguments in method ⁡
+Variable Arguments in method 
 
-If we dont know how many arguments to be passed we can do this by 
+If we don't know how many arguments to be passed we can do this by 
 
 Class test{
     static void fun(int ...v){    // by ... we can pass multiple arguments, Internally it uses array.
@@ -237,9 +236,9 @@ Class test{
 
 
 
-⁡⁣⁢⁣Function Overloading ⁡
+Function Overloading 
 
-⁡⁢⁣⁢Note⁡: same function name but different arguments are called function overloading 
+Note: same function name but different arguments are called function overloading 
 
 public static fun(int a, int b){
 
@@ -252,10 +251,10 @@ public static fun(String b, int c){
 
 
 
-// ⁡⁣⁣⁢Arrays⁡
+// Arrays
 
 
-⁡⁣⁢⁣Syntax⁡
+Syntax
 
 1) For primitive
  
@@ -270,18 +269,18 @@ int[] arr = {, , , };
 String[] str = new String[4];
 
 
-Note: For Primitive Datatype, array will be continious but for objects, object refernce are stored in continous but object itslef can be stored in anywhere coz in java heap is not continous 
+Note: For Primitive Datatype, array will be continuous but for objects, object reference are stored in continuous but object itself can be stored in anywhere coz in java heap is not continous 
 
 arr ----> 2      4     5      6
          2000  2004  2012   2016
 
-str ----> str[0]  str[1]   str[2]  str[3]   // This is stored continous but object can be stored anywhere 
+str ----> str[0]  str[1]   str[2]  str[3]   // This is stored continuous but object can be stored anywhere 
            2000    4000    9000     1000
 
 
 
 
-⁡⁣⁢⁣To print ⁡
+To print 
 
 
 1) For loop
@@ -305,23 +304,21 @@ sout(Arrays.toString(arr))
 
 
 
-// ⁡⁣⁣⁢2D Array ⁡
+// 2D Array 
 
-
-⁡⁣⁢⁣Initialization ⁡
+Initialization 
 
 int[][] arr;
 arr = new int[1][2];
 
 
-
-⁡⁣⁢⁣TO Print⁡
+TO Print
 
 1) To get the size of row 
    
    arr.length;
 
-2) To get the size of colomn 
+2) To get the size of column 
 
 
    arr[0].length;   
@@ -344,7 +341,7 @@ for(int i = 0; i < arr.length; i++ ){
 }
 
 
-⁡⁢⁣⁢Note⁡: Why 2nd method because if the 2d array is jagged like this 
+Note: Why 2nd method because if the 2d array is jagged like this 
 
 int[][] arr = {
     {1, 2, 3},
@@ -359,14 +356,14 @@ or
 
 sout(Arrays.deeptoString(arr));
 
-⁡⁢⁣⁢Note⁡: Best one line way to print 
+Note: Best one line way to print 
 
 
 
-// ⁡⁣⁣⁢Algorithm ⁡
+// Algorithm 
 
 
-⁡⁣⁢⁣𝗟𝗶𝗻𝗲𝗮𝗿 𝗦𝗲𝗮𝗿𝗰𝗵⁡
+𝗟𝗶𝗻𝗲𝗮𝗿 𝗦𝗲𝗮𝗿𝗰𝗵
 
 1) first we have to take array input 
 2) get the key element from the user 
@@ -375,7 +372,7 @@ sout(Arrays.deeptoString(arr));
 
 
 
-⁡⁣⁢⁣Code⁡:
+Code:
  
 import java.util.*;
 
@@ -419,7 +416,7 @@ public class LS {
 }
 
 
-⁡⁣⁢⁣𝗕𝗶𝗻𝗮𝗿𝘆 𝗦𝗲𝗮𝗿𝗰𝗵⁡
+𝗕𝗶𝗻𝗮𝗿𝘆 𝗦𝗲𝗮𝗿𝗰𝗵
 
 
 /*
@@ -513,22 +510,22 @@ public class BinarySearch {
 
 
 
-// ⁡⁣⁣⁢EXTRA⁡ 
+// EXTRA
 
 
-⁡⁣⁢⁣Random Number Fill⁡
+Random Number Fill
 
 java.util.Random
 random.nextInt(starting, ending)
 
 
-⁡⁣⁢⁣Sorting ⁡
+Sorting 
 
 java.utils.Arrays
 Arrays.sort(array_name)
 
 
-⁡⁣⁢⁣Math.min & Math.max⁡
+Math.min & Math.max
 
 Math.min(int1, int2) // Provide 2 int/double/long
 Math.max(int1, int2) // Provide 2 int/double/long
