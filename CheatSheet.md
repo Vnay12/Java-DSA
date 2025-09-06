@@ -1,5 +1,5 @@
 # **Java Behind the scene**
-
+````
                    javoc
 Code (.java file ) -----> Bytecode -----> Exe Code
                     O/P             JVM
@@ -8,79 +8,76 @@ Code (.java file ) -----> Bytecode -----> Exe Code
 .java file  --->  javac  --->  .class file
 - javac is the Java compiler. It converts human-readable high-level code into platform-independent bytecode.
 
-JVM:
+````
+
+### JVM:
 - Loads the .class file.
 - Performs bytecode verification (security & correctness checks).
 - Interprets bytecode line-by-line initially.
 - Monitors which parts of the code run frequently ("hot spots").
 
-JIT (Just-In-Time compiler):
-- Part of the JVM's Execution Engine.
-- Compiles hot code sections into native machine code at runtime.
-- Boosts performance by running these sections directly on the CPU.
+
+### JIT (Just-In-Time compiler):
+* Part of the JVM's Execution Engine.
+* Compiles hot code sections into native machine code at runtime.
+* Boosts performance by running these sections directly on the CPU.
 
 
-NOTE: Every other will compile code's output to exe code for performance but its magic of java due to which it is platform independent
+> NOTE: Every other will compile code's output to exe code for performance but its magic of java due to which it is platform independent
 Write Once Run anywhere ]
 
+---
 
-
-// Java Syntax
-
+# Java Syntax
+````
 public class (file name) {
     public static void main(String[] args) {
         
     }
 }
+````
+---
 
-
-
-
-// Data Type
+# Data Type
 
 Fixed Sized irrespective of compiler/platform
-byte --> 1 bytes / 8 bits
-short --> 2 bytes / 16 bits
-int --> 4 bytes / 32 bits
-long  --> 8 bytes / 64 bits 
 
-float --> 4 bytes / 32 bits 
-double --> 8 bytes / 32 bits ( by default )
+* byte --> 1 bytes / 8 bits
+* short --> 2 bytes / 16 bits 
+* int --> 4 bytes / 32 bits
+* long  --> 8 bytes / 64 bits
+* float --> 4 bytes / 32 bits 
+* double --> 8 bytes / 32 bits ( by default )
+* char --> 2 bytes / 16 bit ( its a unsigned char and supports Unicode unlike any other language )
 
-char --> 2 bytes / 16 bit ( its a unsigned char and supports Unicode unlike any other language )
-
-Note: Java does not support unsigned so its first block will be MSB ]
-
+> Note: Java does not support unsigned so its first block will be MSB ]
 
 
+---
 
 
+# **Java All Package import** 
 
-
-//Java All Package import 
-
+````
 import java.io.*;  
 import java.util.*;   // Mainly used 
+````
+---
 
 
+# **Taking input and Showing Output**
 
+### <font color ="cyan"> Scanning </font>
 
-
-
-
-
-// Taking input and Showing Output
-
-Scanning
-
+````
 Scanner sc = new Scanner(system.in)
 String name = sc.nextLine();
 int x = sc.nextInt();
 float x = sc.nextFloat();
 double x = sc.nextDouble();
+````
 
-
-Note: Scanner is inside the class util 
+> [!Note] Scanner is inside the class util 
 
 Printing 
 
