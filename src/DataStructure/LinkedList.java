@@ -102,13 +102,14 @@ public class LinkedList {
     */
 
 
-    static Node insertAtEnd(Node head, int value){
+    static Node insertAtEnd(Node head, int value)
+    {
         Node curr = new Node(value);
         Node P = head;
-        if (head==null){
+        if (head == null)
+        {
             return curr;
-        }
-        else
+        } else
         {
             while (P.next != null)
             {
@@ -131,11 +132,206 @@ public class LinkedList {
         Tail Pointer are useful for 'End' Operations - Insert at end, Delete at end.
     */
 
-    
+    public static Node insertBeforeKey(Node head, int value, int key)
+    {
+        Node newNode = new Node(value);
+        Node p = head;
+
+        // Case 1: Handles insertion into an empty list
+        if (head == null)
+        {
+            System.out.println("Linked List is empty");
+            return null;
+        }
+        // Handle insertion when the key is the head node
+        if (head.value == key)
+        {
+            newNode.next = head;
+            return newNode;
+        }
+        // Traverse until the next node is null ( end of list ) or the next node's value is key
+        while (p.next != null && p.next.value != key)
+        {
+            p = p.next;
+        }
+        // to Evaluate which while condition was satisfied
+        if (p.next == null)
+        {
+            System.out.println(" Key Node was not found ");
+        } else
+        {
+            newNode.next = p.next;
+            p.next = newNode;
+        }
+
+
+        return head;
+    }
+    /*
+    Approach: Inserting Node Before Key Value
+    Time Complexity: O(N)
+    Space Complexity: O(1)
+
+    Bound Checks:
+    1) Empty List
+    2) If the first node itself is the key
+    3) Traverse the whole list until the end of list, or we found the key
+
+    Note:
+    1) Write the main logic first ( while loop ) and then check bounds
+
+    */
+
+    public static Node insertAfterKey(Node head, int value, int key)
+    {
+        Node newNode = new Node(value);
+        Node p = head;
+
+        // Case 1: Handles insertion into an empty list
+        if (head == null)
+        {
+            System.out.println("Linked List is empty");
+            return null;
+        }
+
+        // Traverse until the next node is null ( end of list ) or the next node's value is key
+        while (p != null && p.value != key)
+        {
+            p = p.next;
+        }
+        // to Evaluate which while condition was satisfied
+        if (p == null)
+        {
+            System.out.println(" Key Node was not found ");
+        } else
+        {
+            newNode.next = p.next;
+            p.next = newNode;
+        }
+        return head;
+    }
+    /*
+    Approach:Inserting Node after key value
+    Time Complexity: O(N)
+    Space Complexity: O(1)
+
+    Bound Checks:
+    1) Empty List
+    2) Traverse the whole list until the end of list, or we found the key
+
+    Note:
+    1) Write the main logic first ( while loop ) and then check bounds
+
+    */
+
+    public static Node deleteAtBegin(Node head)
+    {
+
+        if (head == null)
+        {
+            System.out.println("Linked List is empty");
+            return null;
+        } else if (head.next == null)
+        {
+            head = null;
+
+        } else
+        {
+            head = head.next;
+        }
+
+        return head;
+    }
+    /*
+    Approach:Delete at Begin
+    Time Complexity: O(1)
+    Space Complexity: O(1)
+
+    Bound checks:
+    1) If List is empty
+    2) If only 1 node present
+    */
+
+
+    public static Node deleteAtEnd(Node head)
+    {
+        Node p = head;
+        if (head == null)
+        {
+            System.out.println("Linked List is empty");
+            return null;
+        } else if (head.next == null)
+        {
+            head = null;
+
+        } else
+        {
+            while (p.next.next != null)
+            {
+                p = p.next;
+            }
+            p.next = null;
+
+        }
+
+        return head;
+    }
+    /*
+    Approach:Delete Node At End
+    Time Complexity: O(N)
+    Space Complexity: O(1)
+
+    Bound Check:
+    1) If List is empty
+    2) If only 1 node present
+    */
+
+    public static Node deleteBeforeKey(Node head, int key)
+    {
+
+        Node P = head;
+
+        if (P == null || P.next ==null)
+        {
+            System.out.println("Linked List is empty");
+            return head;
+        } else
+        {
+            Node T = head.next;
+        }
+        // This is for bound check of 1st node
+        if (P.value == key)
+        {
+            System.out.println("This is the first node of linked list");
+            return head;
+        } else
+        {
+
+            while (T != null && T.value != key)
+            {
+                T = T.next;
+                P = P.next;
+            }
+            if (T == null)
+            {
+                System.out.println("Element was not found and exit");
+                return head;
+            } else
+            {
+                P.next = T.next;
+            }
+        }
+
+        return head;
+    }
+
 
     public static void main(String[] args)
     {
+        int key = 20;
         Node head = new Node(10);
+
+        // Creating Simple Linked List
         head.next = new Node(20);
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
@@ -152,6 +348,27 @@ public class LinkedList {
         System.out.println("Linked List After Inserting Node at end");
         head = insertAtEnd(head, 55);
         printLinkedList(head);
+
+        System.out.println();
+        System.out.println("Linked List After Inserting Node Before " + key);
+        head = insertBeforeKey(head, 55, key);
+        printLinkedList(head);
+
+        System.out.println();
+        System.out.println("Linked List After Inserting Node After " + key);
+        head = insertAfterKey(head, 99, key);
+        printLinkedList(head);
+
+        System.out.println();
+        System.out.println("Linked List After Delete At begin");
+        head = deleteAtBegin(head);
+        printLinkedList(head);
+
+        System.out.println();
+        System.out.println("Linked List After Delete At End");
+        head = deleteAtEnd(head);
+        printLinkedList(head);
+
 
     }
 
