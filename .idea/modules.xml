@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/src/Algorithms/BinarySearch/BinarySearch.iml" filepath="$PROJECT_DIR$/src/Algorithms/BinarySearch/BinarySearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/Algorithms/LinearSearch/LinearSearch.iml" filepath="$PROJECT_DIR$/src/Algorithms/LinearSearch/LinearSearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/Questions/Questions.iml" filepath="$PROJECT_DIR$/src/Questions/Questions.iml" />

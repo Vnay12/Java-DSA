@@ -20,6 +20,10 @@ Preconditions:
 =========================================================
 */
 
+
+
+package Algorithm;
+
 import java.util.Arrays;
 
 public class BinarySearch {
@@ -169,4 +173,5 @@ public class BinarySearch {
         System.out.println("Recursive Search Result: " + ansRecursive);
         System.out.println("Built-in Search Result : " + ansBuiltin);
     }
+
 }
