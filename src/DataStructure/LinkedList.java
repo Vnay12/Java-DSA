@@ -21,10 +21,15 @@ This is singly Linked List Code and Basics Operations:
         - Before Key Value
         - After Key Value
     d) Delete Duplicates
+        - Sorted List ( Hashset Method )
+        - Sorted List Optimised ( Two pointer Method )
+        - Unsorted List ( Naive approach nested Loop )
+        - Unsorted List ( Hashset Method )
 
 5) Search
-    a) Find Nth Node from End
-    b) Find Middle node ( Tortoise & Hare Algorithm )
+    a) Find the length of Linked List
+    b) Find Nth Node from End
+    c) Find Middle node ( Tortoise & Hare Algorithm )
 
 6) Reserve
     a) Iterative
@@ -32,13 +37,13 @@ This is singly Linked List Code and Basics Operations:
 
 8) Find Palindrome
 
-9) Find Length of Linked List
-
  */
 
 
 package DataStructure;
 
+
+import java.util.HashSet;
 
 public class LinkedList {
 
@@ -286,18 +291,18 @@ public class LinkedList {
     2) If only 1 node present
     */
 
-    public static Node deleteBeforeKey(Node head, int key)
+    public static Node deleteBeforeKey(Node head, int key)  // This is left
     {
-
+        Node T = null;
         Node P = head;
 
-        if (P == null || P.next ==null)
+        if (P == null || P.next == null)
         {
             System.out.println("Linked List is empty");
             return head;
         } else
         {
-            Node T = head.next;
+            T = head.next;
         }
         // This is for bound check of 1st node
         if (P.value == key)
@@ -325,16 +330,246 @@ public class LinkedList {
         return head;
     }
 
+    // This is removing Duplicate from sorted list using Hashset
+    public static Node deleteDuplicatesSortedList(Node head)
+    {
+        if (head == null || head.next == null)
+        {
+            return head;
+
+        }
+
+        HashSet<Integer> set = new HashSet<>();
+        set.add(head.value);
+        Node curr = head.next;
+        Node prev = head;
+
+
+        while (curr != null)
+        {
+            if (set.contains(curr.value))
+            {
+                prev.next = curr.next;
+            } else
+            {
+                set.add(curr.value);
+                prev = curr;
+            }
+            curr = curr.next;
+        }
+
+        return head;
+    }
+    /*
+    Approach:Deleting Duplicates and keeping first occurrence - Hashset Method
+    Time Complexity: O(N)
+    Space Complexity: O(N)
+
+
+    */
+
+
+    // This is removing duplicate from sorted list and keeping first occurrence
+    public static Node deleteDuplicatesSortedListOptimised(Node head)
+    {
+        if (head == null || head.next == null)
+        {
+            return head;
+        }
+        Node prev = head;
+        Node curr = head.next;
+        while (curr != null)
+        {
+            if (curr.value == prev.value)
+            {
+                prev.next = curr.next;
+
+            } else
+            {
+                prev = curr;
+            }
+            curr = curr.next;
+        }
+
+        return head;
+    }
+    /*
+    Approach:Removing Duplicate from Sorted list Optimised - Two Pointer Approach
+    Time Complexity: O(N)
+    Space Complexity: O(1)
+    */
+
+
+    //This is Removing Duplicate and keeping First Occurrence But Larger Time Complexity
+    public static Node deleteDuplicateUnsortedList(Node head)
+    {
+        Node curr = head;
+        while (curr != null)
+        {
+            Node t = curr;
+            while (t.next != null)
+            {
+
+                if (t.next.value == curr.value)
+                {
+                    t.next = t.next.next;
+                } else
+                {
+                    t = t.next;
+                }
+            }
+            curr = curr.next;
+        }
+        return head;
+    }
+    /*
+    Approach: Delete Duplicate Unsorted - Nested For Loop
+    Time Complexity: O(N^2)
+    Space Complexity: O(1)
+    */
+
+    // This is Remove Duplicate and Keeping First Occurrence Optimised
+    public static Node deleteDuplicateUnsortedListOptimised(Node head)
+    {
+        Node curr = null;
+        Node prev = null;
+        if (head == null || head.next == null)
+        {
+            return head;
+        }
+        HashSet<Integer> set = new HashSet<>();
+        set.add(head.value);
+        curr = head.next;
+        prev = head;
+
+
+        while (curr != null)
+        {
+            if (set.contains(curr.value))
+            {
+                // duplicate -> remove curr, prev stays the same
+                prev.next = curr.next;
+                curr = curr.next;
+            } else
+            {
+                // unique -> keep curr, add to set and advance prev
+                set.add(curr.value);
+                prev = curr;
+                curr = curr.next;
+            }
+        }
+
+
+        return head;
+    }
+    /*
+    Approach:Delete Duplicates in Unsorted Linked List Using HashSet
+    Time Complexity: O(N)
+    Space Complexity: O(N)
+
+    Note: We use Hashset hence it will have extra space
+    Note: If memory is the issue, and we want it in constant time then sort the linked list and then remove duplicates
+    TC: O(N logN)
+    SC: O(1)
+    */
+
+
+    // Finding the middle Node of linked list ( iterative Method )
+    public static int middleLinkedListIterative(Node head){
+        Node temp = head;
+        Node ans = head;
+        int count =0;
+        while (temp != null){
+            count += 1;
+            temp = temp.next;
+
+        }
+        int middle = (count / 2 );
+       for (int i =0; i<middle; i++){
+           ans = ans.next;
+       }
+        return ans.value;
+    }
+    /*
+    Approach:Finding Middle Node of LinkedList - Iterative Method
+    Time Complexity: O(N)
+    Space Complexity: O(1)
+    */
+
+
+    // Finding the middle element of linked List ( Tortoise - Hare Method )
+    public static int middleLinkedList(Node head){
+        if (head == null || head.next == null || head.next.next == null){
+            return 0;
+        }
+
+        Node curr = head;
+        Node fast = head.next.next;
+        while (fast != null)
+        {
+            curr = curr.next;
+            fast = fast.next.next;
+        }
+
+        return curr.value;
+    }
+
+    // This is reversing the linked list using iterative method
+    public static Node reverseLinkedList(Node head)
+    {
+        if (head == null || head.next == null)
+        {
+            return head;
+        }
+
+        Node curr = head;
+        Node prev = null;
+        Node front = head.next;
+
+        while (front != null)
+        {
+            curr.next = prev;
+            prev = curr;
+            curr = front;
+            front = front.next;
+        }
+        curr.next = prev;
+
+
+        return curr;
+    }
+    /*
+    Approach:Reversing the LinkedList - Iterative Method
+    Time Complexity: O(N)
+    Space Complexity: O(1)
+    */
+
+
+    public static void reverseLinkedListRecursive(Node head){
+        if(head == null ){
+
+            return ;
+        }
+        reverseLinkedListRecursive(head.next);
+        System.out.println(head.value);
+
+    }
+
+
 
     public static void main(String[] args)
     {
         int key = 20;
+        int answer ;
         Node head = new Node(10);
 
         // Creating Simple Linked List
-        head.next = new Node(20);
+        head.next = new Node(40);
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
+        head.next.next.next.next = new Node(50);
+        head.next.next.next.next.next = new Node(60);
+        head.next.next.next.next.next = new Node(50);
 
         System.out.println("Original Linked List Before any Changes");
         printLinkedList(head);
@@ -369,6 +604,51 @@ public class LinkedList {
         head = deleteAtEnd(head);
         printLinkedList(head);
 
+        System.out.println();
+        System.out.println();
+        printLinkedList(head);
+        System.out.println("Linked List After Deleting Duplicate from Sorted List");
+        head = deleteDuplicatesSortedList(head);
+        printLinkedList(head);
+
+        System.out.println();
+        System.out.println();
+        printLinkedList(head);
+        System.out.println("Linked List After Deleting Duplicate from Sorted List Optimised");
+        head = deleteDuplicatesSortedListOptimised(head);
+        printLinkedList(head);
+
+        System.out.println();
+        System.out.println();
+        printLinkedList(head);
+        System.out.println();
+        System.out.println("Linked List After Deleting Duplicate from Unosorted List");
+        head = deleteDuplicateUnsortedList(head);
+        printLinkedList(head);
+
+        System.out.println();
+        System.out.println();
+        printLinkedList(head);
+        System.out.println();
+        System.out.println("Linked List After Deleting Duplicate from Unosorted List Optimised");
+        head = deleteDuplicateUnsortedListOptimised(head);
+        printLinkedList(head);
+
+        System.out.println();
+        System.out.println();
+        printLinkedList(head);
+        System.out.println();
+        System.out.println("Linked List After Reversing Using Iterative Method");
+        head = reverseLinkedList(head);
+        printLinkedList(head);
+
+        System.out.println();
+        System.out.println();
+        printLinkedList(head);
+        System.out.println();
+        System.out.println("Finding middle element using iterative method");
+        answer = middleLinkedListIterative(head);
+        System.out.println(answer);
 
     }
 
