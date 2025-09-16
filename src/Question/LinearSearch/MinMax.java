@@ -14,6 +14,8 @@ Explanation: minimum and maximum element of array are 1 and 56789.
 
  */
 
+package Question.LinearSearch;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -53,17 +55,18 @@ public class MinMax {
         }
         System.out.println(Arrays.toString(a));
 
-        int[] result = solve(a);        // Calling if condition method 
+        int[] result = solve(a);        // Calling if condition method
         int[] result2 = solve2(a);     // Calling Math function method
 
         System.out.println(result[0] + " " + result[1]);
         System.out.println(result2[0] + " " + result2[1]);
 
     }
-}
 
+
+}
 /*
- Approach: Using Linear Search Alogirthm
+ Approach: Using Linear Search Algorithm
  Time Complexity: O(N)
  Space Complexity: O(1)
  */

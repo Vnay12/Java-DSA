@@ -7,7 +7,7 @@ Return the single element that appears only once.
 
 Your solution must run in O(log n) time and O(1) space.
 
- 
+
 
 Example 1:
 
@@ -17,7 +17,7 @@ Example 2:
 
 Input: nums = [3,3,7,7,10,11,11]
 Output: 10
- 
+
 
 Constraints:
 
@@ -25,18 +25,10 @@ Constraints:
 0 <= nums[i] <= 105
  */
 
+
+package Question.BinarySearch;
+
 public class SingleElement {
 
-    public static int solve(int[] arr, int left, int right) {
 
-        return 0;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {2, 2, 3, 4, 4, 5, 5, 6, 6};
-        int left = 0;
-        int right = arr.length - 1;
-
-        solve(arr, left, right);
-    }
 }

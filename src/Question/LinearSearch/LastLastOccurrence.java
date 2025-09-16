@@ -13,22 +13,26 @@ Explanation: As the target value is 13 , it appears for the first time at index 
 Example 2:
 Input: N = 7, target=60, array[] = {3,4,13,13,13,20,40}
 Output: -1
-Explanation: Target value 60 is not present in the array 
+Explanation: Target value 60 is not present in the array
 
 
 
 My Solution
 
-1) Take N elements ( Size from user ) 
+1) Take N elements ( Size from user )
 2) Take array from user
 3) Take Key
-4) if key == arr[i] then temp = i and i++ 
+4) if key == arr[i] then temp = i and i++
  */
+
+
+
+package Question.LinearSearch;
 
 import static java.lang.System.out;
 import java.util.*;
 
-public class LastOccurance {
+public class LastLastOccurrence {
 
     public static int solve(Scanner sc) {
         System.out.println("Enter the Size of an array");
@@ -66,18 +70,21 @@ public class LastOccurance {
             System.out.println("element was found at index" + " " + ans);
         }
     }
+
+
+
 }
 
-
 /*
-Question says array is sorted already if so then 
-Time Complexity : 
+Question says array is sorted already if so then
+Time Complexity :
 O(N)
 
 
 If i Sort the array then:
 O(N Log N)
 
-Space Complexity: 
+Space Complexity:
 O(1)
 */
+

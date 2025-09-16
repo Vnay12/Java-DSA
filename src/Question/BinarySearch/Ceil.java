@@ -27,6 +27,8 @@ Constraints:
 
  */
 
+package Question.BinarySearch;
+
 public class Ceil {
 
     static int findCeil(int[] arr, int key) {
@@ -63,4 +65,6 @@ public class Ceil {
         int ans = findCeil(arr, key);
         System.out.println(ans);
     }
+
+
 }
