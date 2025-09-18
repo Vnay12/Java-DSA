@@ -14,7 +14,7 @@ Explanation: minimum and maximum element of array are 1 and 56789.
 
  */
 
-package Question.LinearSearch;
+package Questions.LinearSearch;
 
 import java.util.Arrays;
 import java.util.Random;

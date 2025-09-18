@@ -27,7 +27,7 @@ Constraints:
 
  */
 
-package Question.BinarySearch;
+package Questions.BinarySearch;
 
 public class Ceil {
 

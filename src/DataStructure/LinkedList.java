@@ -17,7 +17,7 @@ This is singly Linked List Code and Basics Operations:
 4) Delete:
     a) At Start
     b) At End
-    c) At Specific Position
+    c) At Specific Position    //////// not done /////////
         - Before Key Value
         - After Key Value
     d) Delete Duplicates
@@ -33,9 +33,9 @@ This is singly Linked List Code and Basics Operations:
 
 6) Reserve
     a) Iterative
-    b) Recursive
+    b) Recursive - ///////not done yet/////////
 
-8) Find Palindrome
+8) Find Palindrome - ///////////not done yet/////////
 
  */
 
@@ -48,13 +48,13 @@ import java.util.HashSet;
 public class LinkedList {
 
     // User Defined class for Linked List
-    static class Node {
+    public static class Node {
 
         int value;
-        Node next;
+        public Node next;
 
         // Constructor
-        Node(int value)
+       public Node(int value)
         {
             this.value = value;
             this.next = null;

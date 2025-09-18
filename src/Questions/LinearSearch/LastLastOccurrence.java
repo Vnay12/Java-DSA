@@ -27,7 +27,7 @@ My Solution
 
 
 
-package Question.LinearSearch;
+package Questions.LinearSearch;
 
 import static java.lang.System.out;
 import java.util.*;
