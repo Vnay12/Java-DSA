@@ -25,12 +25,13 @@ package DataStructure;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.LinkedHashSet;
 import java.util.Scanner;
 
 
 public class ArrayListDS {
-    static Scanner sc = new Scanner(System.in);
-    static ArrayList<Integer> arr = new ArrayList<>();
+    public static Scanner sc = new Scanner(System.in);
+    public static ArrayList<Integer> arr = new ArrayList<>();
 
     // Enter Array from user
     public static void enterArray()
@@ -108,7 +109,8 @@ public class ArrayListDS {
     Space Complexity: O(1)
     */
 
-    public static void deleteAtBegin(){
+    public static void deleteAtBegin()
+    {
         arr.removeFirst();
     }
     /*
@@ -116,8 +118,9 @@ public class ArrayListDS {
     Time Complexity: O(N)
     Space Complexity: O(1)
     */
-    
-    public static void deleteAtEnd(){
+
+    public static void deleteAtEnd()
+    {
         arr.removeLast();
     }
     /*
@@ -127,7 +130,8 @@ public class ArrayListDS {
     */
 
 
-    public static void deleteAtIndex(int position){
+    public static void deleteAtIndex(int position)
+    {
         arr.remove(position);
     }
     /*
@@ -135,6 +139,45 @@ public class ArrayListDS {
     Time Complexity: O(N)
     Space Complexity: O(1)
     */
+
+    public static void deleteDuplicate()
+    {
+        ArrayList<Integer> newarr = new ArrayList<>();
+        for (int i = 0; i < arr.size(); i++)
+        {
+            if (!newarr.contains(arr.get(i)))
+            {
+                newarr.add(arr.get(i));
+
+            }
+
+        }
+        arr.clear();
+
+        arr = newarr;
+
+
+
+    }
+    /*
+    Approach:Deleting Duplicate using New Array
+    Time Complexity: O(N^2) // .contains method uses N time in worst case
+    Space Complexity: O(N)
+    */
+
+
+    public static void deleteDuplicate2(){
+        LinkedHashSet<Integer> set = new LinkedHashSet<>();
+        set.addAll(arr);
+        arr.clear();
+        arr.addAll(set);
+    }
+    /*
+    Approach:Removing Duplicates using Linked Hash Set ( Why LinkedHashSet - it Maintains Order )
+    Time Complexity: O(N)
+    Space Complexity: O(N)
+    */
+
 
     public static void main(String[] args)
     {
@@ -162,6 +205,8 @@ public class ArrayListDS {
         deleteAtIndex(5);
         printList();
 
+        deleteDuplicate();
+        printList();
 
         sc.close();
     }
