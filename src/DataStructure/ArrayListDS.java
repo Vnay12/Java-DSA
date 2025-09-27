@@ -208,6 +208,9 @@ public class ArrayListDS {
         deleteDuplicate();
         printList();
 
+        deleteDuplicate2();
+        printList();
+
         sc.close();
     }
 
