@@ -25,7 +25,7 @@ public class RemoveDuplicate {
         }
         System.out.println(set);
         for( int i = 0; i < arr.length; i++){
-            arr[i] = set[i];
+           // arr[i] = set[i];
         }
 
         int k = set.size();
