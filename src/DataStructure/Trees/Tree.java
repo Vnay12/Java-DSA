@@ -4,6 +4,8 @@ This is Tree Code with Operations:
 1) Implementing Tree Using LinkedList ( Creating Structure and Tree )
 2) Counting Leaf Node, Total Node, Internal Node
 3) Counting Height of the Tree
+4) Inorder, Postorder and Preorder
+5) Level Order
 
  */
 
@@ -107,6 +109,16 @@ public class Tree {
     Space Complexity: O(n)
     */
 
+    static public void preOrder(Node p)
+    {
+        if (p == null)
+            System.out.println("Tree is Empty");
+        System.out.println(p.val);
+        preOrder(p.left);
+        preOrder(p.right);
+
+
+    }
 
     public static void main(String[] args)
     {
