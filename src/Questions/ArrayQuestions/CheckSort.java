@@ -1,6 +1,6 @@
 package Questions.ArrayQuestions;
 
-import static DataStructure.ArrayListDS.*;
+import static DataStructure.ArraysDS.ArrayListDS.*;
 
 public class CheckSort {
 

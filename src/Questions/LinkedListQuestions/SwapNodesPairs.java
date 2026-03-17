@@ -45,7 +45,7 @@ The number of nodes in the list is in the range [0, 100].
  */
 
 package Questions.LinkedListQuestions;
-import static DataStructure.LinkedList.*;
+import static DataStructure.ArraysDS.LinkedList.*;
 
 public class SwapNodesPairs{
     public static Node SwapNode(Node head){

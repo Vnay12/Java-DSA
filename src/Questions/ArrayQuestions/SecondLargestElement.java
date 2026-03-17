@@ -18,7 +18,7 @@ Explanation: Since there is only one element in the array, it is the largest and
 
 package Questions.ArrayQuestions;
 
-import static DataStructure.ArrayListDS.*;
+import static DataStructure.ArraysDS.ArrayListDS.*;
 
 public class SecondLargestElement {
 

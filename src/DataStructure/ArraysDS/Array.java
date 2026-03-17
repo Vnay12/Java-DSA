@@ -19,13 +19,14 @@ Note: Because this static array is messy and has lots or restriction while delet
  */
 
 
-package DataStructure;
+package DataStructure.ArraysDS;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array {
     static Scanner sc = new Scanner(System.in);
+
 
 
     public static void enterArray(int[] arr, int size)

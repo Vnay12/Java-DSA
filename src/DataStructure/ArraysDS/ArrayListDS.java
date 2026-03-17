@@ -21,7 +21,7 @@ This is Array Data Structure Fundamentals and Operations like:
  */
 
 
-package DataStructure;
+package DataStructure.ArraysDS;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

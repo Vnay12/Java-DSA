@@ -17,7 +17,7 @@ package Questions.ArrayQuestions;
 
 
 import java.util.Collections;
-import static DataStructure.ArrayListDS.*;
+import static DataStructure.ArraysDS.ArrayListDS.*;
 
 
 public class LargestElement {
