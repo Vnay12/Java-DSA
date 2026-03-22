@@ -2,7 +2,7 @@
 This is Two Pointer Technique for 2 Sum Problem
 2 Sum Problem : Find the sum of 2 element = target
 
- */
+
 
 package Questions.ArrayQuestions;
 
@@ -33,3 +33,5 @@ public class TwoPointer {
 
     }
 }
+
+*/

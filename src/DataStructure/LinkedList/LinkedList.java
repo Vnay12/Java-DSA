@@ -40,7 +40,7 @@ This is singly Linked List Code and Basics Operations:
  */
 
 
-package DataStructure.ArraysDS;
+package DataStructure.LinkedList;
 
 
 import java.util.HashSet;
