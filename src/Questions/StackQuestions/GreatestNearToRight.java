@@ -19,36 +19,60 @@ Implementation:
  */
 
 
-package Questions.StackQuestions;
-
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 
 import static DataStructure.ArraysDS.ArrayListDS.*;
 
-public class GreatestNearToRight {
+public static class greatestNearToRight {
     static ArrayDeque<Integer> d = new ArrayDeque<>();
     static ArrayList<Integer> ans = new ArrayList<>();
 
-    public static void GNTR()
+    public static ArrayList<Integer> GNTR()
     {
-        for (int i = arr.size()-1; i >0 ; i--)
+        if (arr.isEmpty())
         {
-            if(d.isEmpty()){
-                ans.addLast(-1);
+            System.err.println("Input Array is empty");
+        } else
+        {
+            for (int i = arr.size() - 1; i >= 0; i--)
+            {
+                while (!d.isEmpty() && d.peek() <= arr.get(i))
+                {
+                    d.pop();
+                }
+                if (d.isEmpty())
+                {
+                    ans.add(-1);
+                } else if (arr.get(i) < d.peek())
+                {
+                    ans.add(d.peek());
+                }
+
+                d.push(arr.get(i));
+
             }
+
+
         }
+        return ans;
     }
+}
 
-    public static void main(String[] args)
-    {
-        enterArray();
-        printList();
-        System.out.println(arr.size());
-
-
-    }
+void main(String[] args)
+{
+    enterArray();
+    ArrayList<Integer> ans = greatestNearToRight.GNTR();
+    System.out.println(ans.reversed());
 
 }
+
+
+
+/*
+Approach:Greatest Near to Right : Using Monotonic Stack
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
+
